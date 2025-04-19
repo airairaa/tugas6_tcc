@@ -14,7 +14,7 @@ steps:
   dir: "frontend"
   volumes: 
     - name: "npm-cache"
-      path: /root/.npm   
+      path: "/root/.npm"   
 
 #2. build frontend
 - name: "gcr.io/cloud-builders/npm"
@@ -26,7 +26,7 @@ steps:
   dir: "frontend"
   volumes: 
     - name: "npm-cache"
-      path: /root/.npm
+      path: "/root/.npm"
 
 #3. Deploy ke app engine
     - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
