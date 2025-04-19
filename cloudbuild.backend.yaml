@@ -6,7 +6,7 @@ steps:
 
 #2. push ke contrainer registy/ Artifact Registry
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/$PROJECT_ID/notes-backend-aira"]
+  args: ["build", "gcr.io/$PROJECT_ID/notes-backend-aira"]
   
 #3. Deploy ke cloud run
 - name: "gcr.io/cloud-builders/gcloud"
